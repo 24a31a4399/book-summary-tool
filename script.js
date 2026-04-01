@@ -4,14 +4,16 @@ function getSummary() {
     let summary = "";
 
     if (book === "wings of fire") {
-        summary = "This book is about APJ Abdul Kalam's journey from a small boy to a great scientist.";
-    } 
-    else if (book === "rich dad poor dad") {
-        summary = "This book teaches financial knowledge and importance of money management.";
-    }
-    else {
-        summary = "Summary not available. Try another book.";
-    }
-
+    summary = "This book is about APJ Abdul Kalam's journey.";
+} 
+else if (book === "rich dad poor dad") {
+    summary = "This book teaches financial knowledge.";
+}
+else if (book === "amma dairy lo konni pageelu") {
+    summary = "This book is about emotions and life experiences written in a diary format.";
+}
+else {
+    summary = "Summary not available. Try another book.";
+}
     document.getElementById("output").innerText = summary;
 }
