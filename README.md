@@ -18,7 +18,7 @@ Technologies Used
 * JavaScript
 
 Live Demo
-
+https://24a31a4399.github.io/book-summary-tool
 
 Future Improvements
 
