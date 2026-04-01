@@ -17,23 +17,7 @@ Technologies Used
 * CSS
 * JavaScript
 
-
-
- Project Structure
-
-
-book-summary-tool/
-│── index.html
-│── style.css
-│── script.js
-│── README.md
-```
-
----
-
 Live Demo
-
-(Add your GitHub Pages link here)
 
 
 Future Improvements
@@ -47,5 +31,3 @@ Future Improvements
  Hemalatha Vennela
 
 
-
-If you like this project, give it a ⭐ on GitHub!
