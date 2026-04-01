@@ -8,7 +8,8 @@ async function getSummary() {
     let data = await response.json();
 
     let found = data.find(item =>
-        book.includes(item.book) && author.includes(item.author)
+        book.includes(item.book) ||
+        author.includes(item.author)
     );
 
     if (found) {
