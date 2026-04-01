@@ -1,20 +1,17 @@
 async function getSummary() {
-    let book = document.getElementById("book").value.toLowerCase().trim();
-    let author = document.getElementById("author").value.toLowerCase().trim();
+    let book = document.getElementById("book").value;
+    let author = document.getElementById("author").value;
 
-    document.getElementById("output").innerText = "Loading...";
+    document.getElementById("output").innerText = "Generating AI summary...";
 
-    let response = await fetch("books.json");
+    let response = await fetch("https://YOUR_BACKEND_LINK/getSummary", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ book, author })
+    });
+
     let data = await response.json();
-
-    let found = data.find(item =>
-        book.includes(item.book) ||
-        author.includes(item.author)
-    );
-
-    if (found) {
-        document.getElementById("output").innerText = found.summary;
-    } else {
-        document.getElementById("output").innerText = "Summary not available";
-    }
+    document.getElementById("output").innerText = data.content;
 }
